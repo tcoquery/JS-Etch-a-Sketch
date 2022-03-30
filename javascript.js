@@ -1,8 +1,6 @@
 const container = document.getElementById("container");
 const playAgain = document.querySelector(".playAgain");
 
-
-
 function createGrid(x) {
     for (let rows = 0; rows < x; rows++) {
         for (let columns = 0; columns < x; columns++) {
@@ -24,8 +22,14 @@ gridItem.forEach(grid =>{
 });
 
 playAgain.addEventListener("click", function(){
-    location.reload();
+    gridItem.forEach(grid =>{
+            grid.setAttribute("style", "background: white;");
+        });
 });
+
+
+
+
 
 
 
