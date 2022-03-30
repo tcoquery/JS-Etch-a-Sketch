@@ -1,0 +1,17 @@
+#container {
+	position: relative;
+	top: 30px;
+	outline:2px solid #000;
+	font-size: 0;
+	margin:auto;
+	height:960px;
+	width:960px;
+}
+  
+  
+  .grid {
+	outline:1px solid #000;
+	display:inline-block;
+    height: 60px;
+    width: 60px;
+  }
