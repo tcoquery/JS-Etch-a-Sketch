@@ -18,9 +18,7 @@ body {
 	outline:1px solid #000;
 	display:inline-block;
     background: white;
-    height: 60px;
-    width: 60px;;
-  }
+}
 
 button {
     margin: 50px;
