@@ -1,6 +1,5 @@
 const container = document.getElementById("container");
 
-
 function createGrid(x) {
     for (let rows = 0; rows < x; rows++) {
         for (let columns = 0; columns < x; columns++) {
@@ -11,5 +10,20 @@ function createGrid(x) {
     }
 }
 
-
 createGrid(16);
+
+const gridItem = document.querySelectorAll(".grid");
+console.log(gridItem);
+
+gridItem.forEach(grid =>{
+    grid.addEventListener("mouseover", function() {
+        grid.setAttribute("style", "background: black;");
+    });
+});
+
+
+
+
+
+
+
