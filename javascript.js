@@ -1,21 +1,26 @@
 const container = document.getElementById("container");
 const playAgain = document.querySelector(".playAgain");
+const clear = document.querySelector(".clear");
 
-let squareNumbers = Number(window.prompt("Set a size for the grid (must be less than 100)")); 
 
-function createGrid(x) {
-    for (let rows = 0; rows < x; rows++) {
-        for (let columns = 0; columns < x; columns++) {
+function createGrid() {
+    let gridSize = Number(window.prompt("Set a size for the grid (must be less than 100)")); 
+    if (gridSize > 100 || Number.isNaN(gridSize)) {
+        return window.alert("Wrong input");
+    } else {
+        for (let rows = 0; rows < gridSize; rows++) {
+        for (let columns = 0; columns < gridSize; columns++) {
             const grid = document.createElement("div");
             grid.classList.add("grid");
-            grid.style.height = 960/x + "px";
-            grid.style.width = 960/x + "px";
+            grid.style.height = 960/gridSize + "px";
+            grid.style.width = 960/gridSize + "px";
             container.appendChild(grid);
         };
     }
+}  
 }
 
-createGrid(squareNumbers);
+createGrid();
 
 const gridItem = document.querySelectorAll(".grid");
 
@@ -27,6 +32,11 @@ gridItem.forEach(grid =>{
 });
 
 playAgain.addEventListener("click", function(){
+    location.reload();
+     
+    });
+
+clear.addEventListener("click", function(){
     gridItem.forEach(grid =>{
         grid.style.backgroundColor = "white";
         });
