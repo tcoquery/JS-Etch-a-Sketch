@@ -6,7 +6,8 @@ const clear = document.querySelector(".clear");
 function createGrid() {
     let gridSize = Number(window.prompt("Set a size for the grid (must be less than 100)")); 
     if (gridSize > 100 || Number.isNaN(gridSize)) {
-        return window.alert("Wrong input");
+        if(alert("Wrong input")){}
+            else window.location.reload(); 
     } else {
         for (let rows = 0; rows < gridSize; rows++) {
         for (let columns = 0; columns < gridSize; columns++) {
