@@ -11,8 +11,8 @@ body {
 	flex-wrap: wrap;
 	font-size: 0;
 	margin:auto;
-	height:960px;
-	width:960px;
+	min-height:960px;
+	max-width:960px;
 	overflow:hidden;
 	
 }
@@ -31,3 +31,4 @@ body {
 .clear {
 	margin-bottom: 35px;
 }
+
